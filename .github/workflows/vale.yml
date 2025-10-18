@@ -1,0 +1,15 @@
+name: Vale
+on:
+  pull_request:
+    paths:
+      - "docs/**"
+      - ".vale.ini"
+      - "styles/**"
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: errata-ai/vale-action@v2
+        with:
+          files: docs/
