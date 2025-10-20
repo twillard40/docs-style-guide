@@ -1,19 +1,25 @@
-# docs-style-guide
-For use with Vale to lint docs
+# AI-Augmented Docs Pipeline (Vale + GitHub Actions)
 
-# Docs Style Guide with Vale
+This repo demonstrates a proof-of-concept for an automated documentation workflow:
+a custom Vale style guide integrated with GitHub Actions for continuous linting and style enforcement.
+It’s designed as the foundation for AI-assisted content generation and standardization.
 
-This repo demonstrates how to enforce a documentation style guide using [Vale](https://vale.sh).
+## What's Included
+- **.vale.ini** – Main Vale configuration file  
+- **styles/Custom/** – Custom YAML rules (e.g., enforce “log in” instead of “login”)  
+- **.github/workflows/vale.yml** – GitHub Actions CI pipeline that runs Vale on every pull request  
+- **docs/** – Sample Markdown files linted by Vale  
+- **templates/** – Placeholder for Concept–Task–Reference and AI-assisted templates  
 
-## What’s included
-- **.vale.ini** — Vale config file
-- **styles/Custom/** — custom YAML rules (e.g., enforce “log in” instead of “login”)
-- **docs/** — sample Markdown docs checked by Vale
+## How to Use
 
-## How to use
 ```bash
 # Install Vale (macOS)
 brew install vale
 
-# Run Vale on the docs folder
+# Run Vale locally
 vale docs/
+
+# Run Vale via GitHub Actions
+# Push or open a PR — the CI job will automatically check all Markdown files
+
